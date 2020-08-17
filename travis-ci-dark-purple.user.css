@@ -26,6 +26,7 @@
     body,
     button,
     footer,
+    input,
     pre.codedisplay[class*="language-"],
     .build-commit,
     .build-info,
@@ -34,6 +35,8 @@
     .build-tiles li,
     .build-tools,
     .dupa,
+    .ember-basic-dropdown-trigger,
+    .ember-basic-dropdown-content,
     .landing,
     .landing .build-flows,
     .loading-page,
@@ -57,9 +60,12 @@
         background: var(--background) !important;
     }
  
+    .cache-item:hover,
+    .highlighter-rouge .highlight,
     .job-env:hover,
     .job-name:hover,
-    .navigation-nested a:hover
+    .navigation-nested a:hover,
+    .request-item:hover
     {
         background: var(--background-light) !important;
     }
@@ -83,6 +89,7 @@
     .owner-info::after,
     .owner-tile:after,
     .profile-header h1::after,
+    .row-content:after,
     .row-message::after,
     .row-branch.booting::after,
     .row-branch.canceled::after,
@@ -102,7 +109,7 @@
     .tile-title.queued::after,
     .tile-title.received::after,
     .tile-title.started::after,
-    .username span::after
+    .username div::after
     {
         background: linear-gradient(-90deg,var(--background) 20%,rgba(255,255,255,0) 100%) !important;
     }
@@ -155,8 +162,10 @@
         background: linear-gradient(to right,var(--yellow) 0,var(--yellow) 8px,var(--background) 8px,var(--background) 100%) no-repeat !important;
     }
 
+    .cache-item .row-item:after,
     .close-env::after,
-    .detail-job-env::after
+    .detail-job-env::after,
+    .request-item .row-item:after
     {
         background: none !important;
     }
@@ -171,11 +180,15 @@
     .action-button--debug,
     .action-button--restart,
     .build-header,
+    .cache-item,
     .jobs-item,
     .navigation-nested,
     .option-display,
+    .repo-list .rows,
+    .request-item,
     .row-li,
-    .search--sidebar .search-inner
+    .search--sidebar .search-inner,
+    .searchbox-input
     {
         border-color: var(--border) !important;
     }
@@ -201,16 +214,23 @@
         border-right-color: var(--border) !important;
     }
 
+    #env-var-secrecy
+    {
+        box-shadow: 0 0 3px 3px var(--border) !important;
+    }
+
     .footer
     {
         box-shadow: 0 -2px 3px var(--border) !important;
     }
  
+    blockquote p,
     .active,
     .profile-page h2,
     .repo-header,
     .repo-title a,
     .repo-title a:hover,
+    .toolbar-item:hover,
     #navigation-anchor,
     nav a
     {
@@ -219,6 +239,8 @@
 
     code
     {
+        background: var(--background-light) !important;
+        border-color: var(--border) !important;
         color: var(--color) !important;
         text-shadow: none !important;
     }
