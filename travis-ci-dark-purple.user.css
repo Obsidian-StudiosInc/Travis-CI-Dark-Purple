@@ -171,7 +171,9 @@
     }
 
     .switch .switch-inner,
-    .switch.active .switch-inner
+    .switch.active .switch-inner,
+    .travistab-nav li.active a::after,
+    .travistab-nav--secondary li.active a::after
     {
         background-color: var(--purple);
     }
