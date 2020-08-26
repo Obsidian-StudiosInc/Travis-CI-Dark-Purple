@@ -193,6 +193,12 @@
         border-color: var(--border) !important;
     }
 
+    .job-waiting-stages-container .loading-line,
+    .job-waiting-stages-container .stage-loaded-ring
+    {
+        border-color: var(--purple) !important;
+    }
+
     .repo-navigation,
     .sidebar-list ul,
     .travistab-nav.travistab-nav--underline,
@@ -226,6 +232,7 @@
  
     blockquote p,
     .active,
+    .job-waiting-stages-container .stage-loaded-text,
     .profile-page h2,
     .repo-header,
     .repo-title a,
@@ -244,4 +251,10 @@
         color: var(--color) !important;
         text-shadow: none !important;
     }
+
+    .job-waiting-stages-container .spinner #loading-inner
+    {
+        stroke: var(--purple) !important;
+    }
+
 }
